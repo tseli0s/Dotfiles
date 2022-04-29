@@ -1,16 +1,14 @@
-# Startup commands
-neofetch
+
+
 # Usual shell stuff
 export PATH=$HOME/.bin:/usr/local/bin:$PATH:/usr/libexec:$HOME/.local/bin/
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='/usr/bin/vim'
 export VIDEODRV='wayland'
 # The zsh theme to use. Empty means don't use omz for the theme.
-export ZSH_THEME="";
+export ZSH_THEME="spaceship";
 # Setup a prompt (Pure)
 fpath+=$HOME/.zsh/pure
-autoload -U promptinit; promptinit
-prompt pure
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -28,9 +26,9 @@ plugins=(git)
 
 # Enable omz.
 source $ZSH/oh-my-zsh.sh
-
 # Local configurations, you probably want to change this.
-
+SPACESHIP_HOST_SHOW="always"
+SPACESHIP_HOST_COLOR="green"
 export MANPATH="/usr/local/man:$MANPATH:/usr/share/man"
 export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch amd64"
@@ -42,3 +40,8 @@ alias la='ls -lhA'
 alias ll='ls -Lh'
 alias v='vim'
 alias q='exit 0'
+alias rm='rf rfv'
+# Setup some plugins for zsh
+fpath=($fpath "/home/aggelos/.zfunctions")
+source $HOME/.oh-my-zsh/custom/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
