@@ -4,6 +4,11 @@
 export PATH=$HOME/.bin:/usr/local/bin:$PATH:/usr/libexec:$HOME/.local/bin/
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='/usr/bin/vim'
+# This is needed for Qt5 apps to look right
+export QT_QPA_PLATFORMTHEME=qt5ct
+# Required to run Qt applications under X11 instead of Wayland
+# (Wayland has some ugly titlebars, that's all)
+export QT_QPA_PLATFORM=xcb
 export VIDEODRV='wayland'
 # The zsh theme to use. Empty means don't use omz for the theme.
 export ZSH_THEME="spaceship";
@@ -40,7 +45,8 @@ alias la='ls -lhA'
 alias ll='ls -Lh'
 alias v='vim'
 alias q='exit 0'
-alias rm='rf rfv'
+alias rm='rm -rfv'
+alias neofetch="neofetch --config ~/.config/neofetch/uniform.conf"
 # Setup some plugins for zsh
 fpath=($fpath "/home/aggelos/.zfunctions")
 source $HOME/.oh-my-zsh/custom/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
