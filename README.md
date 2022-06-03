@@ -6,6 +6,6 @@ Shell: ZSH
 
 Distribution: Fedora 36 GNOME
 
-Kernel version: 5.17.3
+Kernel version: 5.17.11
 # License
 All the files are licensed under the MIT License.
