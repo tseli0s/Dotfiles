@@ -4,8 +4,8 @@ For Arch Linux users, make sure your kernel is not the LTS one.
 # Information about my system (Make sure our distros are compatible !)
 Shell: ZSH
 
-Distribution: Fedora 36 GNOME
+Distribution: Arch Linux
 
-Kernel version: 5.17.11
+Kernel version: 5.15.55-2-lts
 # License
 All the files are licensed under the MIT License.
